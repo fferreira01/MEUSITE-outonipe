@@ -23,8 +23,14 @@ body{
 	align-items:center;
 }
 
+header, .menu-fixo, .navbar {
+	position: fixed; /* ou sticky */
+	z-index: 999;    /* Esse número alto garante que NADA passe por cima do menu */
+  }
+  
+
 .logo-titulo{display:flex;align-items:center;gap:10px;}
-.logo{width:45px;}
+.logo{width: 60px;}
 .menu h1{font-size:22px;color:#CFAE70;letter-spacing:2px;}
 .menu nav a{color:#CFAE70;text-decoration:none;margin:0 10px;font-weight:bold;}
 .menu nav a:hover{color:#fff;}
@@ -32,12 +38,18 @@ body{
 
 /* GERAL */
 .secao{padding:120px 20px;text-align:center;min-height:100vh;}
-.secao h2{font-size:38px;color:#CFAE70;margin-bottom:20px;}
+.secao h2{font-size:38px;color:#CFAE70;margin-bottom:50px;margin-top: 50px;}
 .secao p{font-size:17px;color:#ccc;}
 
+h2{
+	font-family: "Fontdiner Swanky", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
 /* INICIO */
 #inicio{
-	background:url(https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400) center/cover;
+	background:url(img/carta.jpg) center/cover;
 	padding-top:180px;
 }
 .btn{
@@ -66,6 +78,51 @@ body{
 .preco{font-size:24px;font-weight:bold;margin:10px 0;}
 .produto button{background:#CFAE70;color:#000;border:none;width:100%;padding:12px;font-weight:bold;cursor:pointer;}
 .produto button:hover{background:#fff;}
+
+.video {
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	width: 100%;
+	margin: 20px 0; /* Cria um espaço seguro acima e abaixo do vídeo para não quebrar o site */
+  }
+  
+  .modal {
+	position: relative;     
+	width: 100%;            
+	max-width: 360px;       /* Tamanho ideal para simular tela de celular */
+	aspect-ratio: 9 / 16;   /* Força a proporção exata de um Reels/Stories sem quebrar o layout */
+	border-radius: 45px;    
+	overflow: hidden;       
+	/* Removemos qualquer z-index daqui para não quebrar a rolagem */
+  }
+  
+  video {
+	width: 100%;
+	height: 100%;          /* Preenche a proporção 9:16 da modal */
+	object-fit: cover;
+	display: block;         
+  }
+  
+  /* O Notch do iPhone */
+  .icone-iphone {
+	position: absolute;
+	top: 15px;              
+	left: 50%;              
+	transform: translateX(-50%); 
+	
+	width: 110px;           
+	height: 28px;           
+	background-color: #000000; 
+	border-radius: 20px;    
+	
+	/* z-index baixo para o notch ficar na frente APENAS do vídeo, mas atrás do seu menu */
+	z-index: 2;            
+	pointer-events: none;   
+  }
+  
+  
+  
 
 /* CONTATO */
 #contato{background:#111;}
