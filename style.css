@@ -90,27 +90,21 @@ h2{
 
 
   /* Seção MVV = missão visão valores */
+.mvv {
+  display: flex; /* coloca as caixas uma do lado da outra */
+  gap: 20px; /* espaço entre as caixas */
+  justify-content: center; /* centraliza tudo no meio da tela */
+  flex-wrap: wrap; /* no celular, joga uma pra baixo da outra */
+  padding: 20px;
+}
 
-  .mvv {
-	display: flex;
-	gap: 20px;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding: 20px;
-  }
-  .mvv h2 {
-	color: #CFAE70;
-	font-size: 42px;
-	text-align: center;
-	width: 100%;
-  }
-  .box {
-	background: #1a1a1a;
-	border-radius: 12px;
-	padding: 25px;
-	width: 300px;
-	color: #fff;
-  }
+.box {
+  background: #1a1a1a; /* fundo preto da caixa */
+  border-radius: 12px; /* deixa a borda arredondada */
+  padding: 25px; /* espaço dentro da caixa */
+  width: 300px; /* largura de cada caixa */
+  color: #fff; /* cor do texto branco */
+}
   .box h3 {
 	color: #CFAE70;
   }
