@@ -84,27 +84,55 @@ h2{
 	justify-content: center; 
 	align-items: center;
 	width: 100%;
-	margin: 20px 0; /* Cria um espaço seguro acima e abaixo do vídeo para não quebrar o site */
+	margin: 20px 0; /* Cria um espaço cima e abaixo do vídeo para não quebrar o site */
   }
   
+
+
+  /* Seção MVV = missão visão valores */
+
+  .mvv {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 20px;
+  }
+  .mvv h2 {
+	color: #CFAE70;
+	font-size: 42px;
+	text-align: center;
+	width: 100%;
+  }
+  .box {
+	background: #1a1a1a;
+	border-radius: 12px;
+	padding: 25px;
+	width: 300px;
+	color: #fff;
+  }
+  .box h3 {
+	color: #CFAE70;
+  }
+
   .modal {
 	position: relative;     
 	width: 100%;            
-	max-width: 360px;       /* Tamanho ideal para simular tela de celular */
-	aspect-ratio: 9 / 16;   /* Força a proporção exata de um Reels/Stories sem quebrar o layout */
+	max-width: 360px;       /* Tamanho para  simular tela de celular */
+	aspect-ratio: 9 / 16;   /* Força um formato Reels sem quebrar o layout */
 	border-radius: 45px;    
 	overflow: hidden;       
-	/* Removemos qualquer z-index daqui para não quebrar a rolagem */
+	/* Remove qualquer z-index(serve para quando uma coisa esta cobrindo a outra no site) */
   }
   
   video {
 	width: 100%;
-	height: 100%;          /* Preenche a proporção 9:16 da modal */
+	height: 100%;          /* Preenche a proporção 9:16 da modal(video em pé) */
 	object-fit: cover;
 	display: block;         
   }
   
-  /* O Notch do iPhone */
+  /* O Notch do iPhone(icone do "celular" */
   .icone-iphone {
 	position: absolute;
 	top: 15px;              
@@ -116,7 +144,7 @@ h2{
 	background-color: #000000; 
 	border-radius: 20px;    
 	
-	/* z-index baixo para o notch ficar na frente APENAS do vídeo, mas atrás do seu menu */
+	/* z-index baixo para o notch ficar na frente APENAS do vídeo, mas atrás do menu */
 	z-index: 2;            
 	pointer-events: none;   
   }
